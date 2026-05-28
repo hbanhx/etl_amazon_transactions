@@ -1,6 +1,6 @@
 # Amazon ↔ NAV Reconciliation & Posting Engine
 
-This project automates a real business process: reconciling Amazon settlement data with Microsoft Dynamics NAV and generating NAV‑compatible general journal lines. It replaces an Excel Power Query workflow originally used to match TXT exports from Amazon. For this Python version, the TXT files were pre‑processed and loaded into SQL Server.
+This project automates a real business process: reconciling Amazon payments data with Microsoft Dynamics NAV and generating NAV‑compatible general journal lines. It replaces an Excel Power Query workflow originally used to match TXT exports from Amazon. For this Python version, the TXT files were pre‑processed and loaded into SQL Server.
 
 Companion project for order import:  
 https://github.com/hbanhx/etl_amazon_orders
