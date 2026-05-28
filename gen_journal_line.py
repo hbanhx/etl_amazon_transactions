@@ -46,6 +46,7 @@ class GenJournalLine:
     BalAccountNo: str
 
 
+    @staticmethod
     def create_document_no(line_no, row):
         # Create document numbers from date and journal line number
         date = row['am_Date'].strftime("%Y%m%d")
