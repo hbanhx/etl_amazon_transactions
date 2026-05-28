@@ -5,6 +5,8 @@ This project automates a real business process: reconciling Amazon settlement da
 Companion project for order import:  
 https://github.com/hbanhx/etl_amazon_orders
 
+**Volume: ~10,000 journal lines/month, ~98% automated.**
+
 ---
 
 ## Workflow
