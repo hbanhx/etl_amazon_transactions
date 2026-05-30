@@ -85,10 +85,8 @@ def merge_amazon_cle(am, cle):
         data["am_Other"], 2
     )
     # Reconcile amounts in currency (not LCY)
-    # data["dcle_amount"] = round(data["dcle_Amount"], 2)
     data["recon_amount"] = round(data["am_amount_ex_fee"] - data["dcle_Amount"])
 
-    # cols_to_move = ["am_amount_ex_fee", "dcle_amount", "recon_amount"]
     cols_to_move = ["am_amount_ex_fee", "recon_amount"]
     data = data[[c for c in data.columns if c not in cols_to_move] + cols_to_move]
 
@@ -117,11 +115,7 @@ def melt_amounts(data):
         )
     ]
 
-    # # Rename lines flagged as GL expenses 
-    # melted.loc[melted["am_type_map"] == "gl_acc", "amount_posting_type"] = (
-    #     melted["am_type_map"] + "_" + melted["amount_posting_type"]
-    # )
-
+    # Rename lines flagged as GL expenses 
     melted["amount_posting_type"] = (
         melted["am_type_map"] + "_" + melted["amount_posting_type"]
     )

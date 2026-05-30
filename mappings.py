@@ -85,8 +85,6 @@ class Mappings:
             "Signed": 1,
         },
 
-
-
         # Commingling VAT, Order retrocharge, Other, Service Fees
         "gl_acc_am_Total_(EUR)": {
             "Document Type": GenJournalDocumentType.PAYMENT,
